@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/virtual-keyboard/1.26.18/css/keyboard-dark.min.css"/>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/caret/1.0.0/jquery.caret.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/virtual-keyboard/1.26.18/js/jquery.keyboard.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/virtual-keyboard/1.26.18/js/jquery.mousewheel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/virtual-keyboard/1.26.18/layouts/ms-Devanagari.min.js"></script>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <form>
+            {% for i in l %}
+                <div class="form-group">
+                    <label for="q{{ loop.index }}" style="font-size: 17px;">{{ i }}</label>
+                    <div class="row" id="dq{{ loop.index }}">
+                        <div class="col-md-11">
+                            <input type="text" class="form-control" id="q{{ loop.index }}">
+                        </div>
+                        <div class="col-md-1">
+                            <button class="btn btn-primary" onclick="tag_sentence('q{{ loop.index }}');">Tag</button>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </form>
+        <div id="keyboard" style="position: fixed; bottom: 0px;">
+        </div>
+    </div>
+{% endblock %}
