@@ -14,10 +14,32 @@
 
 {% block body %}
     <div class="container">
+        <div style="font-size: 15px;">
+            Please take this survey to help us with our project.<br/>
+            Answer these questions in Hindi and tag the words appropriately.<br/>
+            Type in your response using the provided virtual keyboard and then press tag. This allows you to tag words individually. You can return to editing the sentence by pressing edit.<br/>
+            Once all sentences are tagged, press submit.<br/>
+            <b>Tags:</b><br/>
+            <ul id="list-tags"></ul>
+            <b>Suggested Words:</b><br/>
+            <b><u>Diseases:</u></b> ट्यूबरकुलोसिस, हार्ट अटैक, एच. आई. वी.  एड्स, डायबिटीस, किडनी स्टोन्स, ब्रेईन कैंसर, बोन कैंसर, स्किन कैंसर, ब्रेस्ट कैंसर, लंग कैंसर, ब्लड कैंसर, ब्रेईन ट्यूमर, चिकनपोक्स, टाइफाइड, फ्लू, फीवर, कॉमन कोल्ड, मलेरिया, जॉन्डिस, देर्मतितिस<br/>
+            <b><u>Symptoms:</u></b> फीवर, बुखार, कोल्ड, खांसी, सर्दी, जुकाम, दस्त, सिर दर्द, डयेरिया, बदन दर्द, नाक से ख़ून, पेट  दर्द, चेस्ट पेन, रैश, सूजन, चक्कर आना, थकान, भूख में कमी, खून बहना, गैस, नाक बंद<br/>
+            <br/>
+            <b>Tagged Examples:</b><br/>
+            <ol style="font-weight: bold;">
+                <li><span style="font-weight:normal;">क्या<b>/OTHER</b>  हार्ट<b>/DISEASE</b> अटैक<b>/DISEASE</b> होने<b>/OTHER</b>  से<b>/OTHER</b> पहले<b>/TIME</b> बाये<b>/SYMPTOM</b> हाथ<b>/SYMPTOM</b> में<b>/OTHER</b> दर्द<b>/SYMPTOM</b> और<b>/OTHER</b> चेस्ट<b>/SYMPTOM</b> पेन<b>/SYMPTOM</b> होना<b>/OTHER</b> सामन्य<b>/OTHER</b> हैं<b>/OTHER</b>?<br/></span></li>
+                <li><span style="font-weight:normal;">मुझे<b>/OTHER</b> कल<b>/TIME</b> सुबह<b>/TIME</b> से<b>/OTHER</b> पेट<b>/SYMPTOM</b> में<b>/OTHER</b> दर्द<b>/SYMPTOM</b> है<b>/OTHER</b>।<br/></span></li>
+                <li><span style="font-weight:normal;">मैंने<b>/OTHER</b> हेपेटाइटिस<b>/VACCINE</b> बी<b>/VACCINE</b> का<b>/OTHER</b> टीका<b>/VACCINE</b> लिया<b>/OTHER</b> था<b>/OTHER</b>, लेकिन<b>/OTHER</b> फिर<b>/OTHER</b> भी<b>/OTHER</b> मेरा<b>/OTHER</b> लिवेर<b>/DISEASE</b> फेल<b>/DISEASE</b> हो<b>/OTHER</b> गया<b>/OTHER</b>।<br/></span></li>
+                <li><span style="font-weight:normal;">क्या<b>/OTHER</b> गंभीर<b>/SYMPTOM</b> सूजन<b>/SYMPTOM</b> और<b>/OTHER</b> रैश<b>/SYMPTOM</b>, देर्मतितिस<b>/DISEASE</b> का<b>/OTHER</b> प्रमाण<b>/OTHER</b> है<b>/OTHER</b>?<br/></span></li>
+                <li><span style="font-weight:normal;">में<b>/OTHER</b>  वीक्ली<b>/TIME</b> चेकप<b>/OTHER</b> के<b>/OTHER</b> लिए<b>/OTHER</b> डयागोनेस्टिक<b>/PLACE</b> सेंटर<b>/PLACE</b> गयी<b>/OTHER</b> थी<b>/OTHER</b> और<b>/OTHER</b> पता<b>/OTHER</b> चला<b>/OTHER</b> की<b>/OTHER</b> मेरी<b>/OTHER</b> बी.पि<b>/METRIC</b> 150<b>/NUMBER</b> -<b>/OTHER</b> 102<b>/NUMBER</b> म​.म<b>/UNIT</b> और<b>/OTHER</b> शुगर<b>/METRIC</b> लेवल<b>/METRIC</b> १४५<b>/NUMBER</b> म.जी<b>/UNIT</b> तक<b>/OTHER</b> बड<b>/OTHER</b> गया<b>/OTHER</b> हैं<b>/OTHER</b>।<br/></span></li>
+            </ol>
+            <br/>
+
+        </div>
         <form>
             {% for i in l %}
                 <div class="form-group">
-                    <label for="q{{ loop.index }}" style="font-size: 17px;">{{ i }}</label>
+                    <label for="q{{ loop.index }}" style="font-size: 15px;">{{ i | safe }}</label>
                     <div class="row" id="dq{{ loop.index }}">
                         <div class="col-md-11">
                             <input type="text" class="form-control" id="q{{ loop.index }}">
@@ -29,6 +51,12 @@
                 </div>
             {% endfor %}
         </form>
+        <button class="btn btn-success" onclick="sub();">Submit</button>
+        <form id="form" action="/" method="POST">
+            <input id="data" name="data" style="display: none;"/>
+        </form>
+        <br/>
+        <br/>
         <div id="keyboard" style="position: fixed; bottom: 0px;">
         </div>
     </div>

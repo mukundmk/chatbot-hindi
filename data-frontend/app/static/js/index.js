@@ -1,5 +1,17 @@
-data = {}
+data = {};
+tags = [{val: "ALLERGY", desc: "Allergy"}, {val: "DISEASE", desc: "Disease"}, {val: "METRIC", desc: "Metric"},
+        {val: "NAME", desc: "Name"}, {val: "NUMBER", desc: "Number | Quantity of metric"},
+        {val: "OTHERS", desc: "Others"}, {val: "PLACE", desc: "Place"}, {val: "SYMPTOM", desc: "Symptom"},
+        {val: "TIME", desc: "Time"}, {val: "UNIT", desc: "Unit | Unit of Metric"}, {val: "VACCINE", desc: "Vaccine"}];
+
+select = '';
 $(document).ready(function() {
+    ls = '';
+    for(tag in tags) {
+        select += "<option value=\""+tags[tag]["val"]+"\">"+tags[tag]["val"]+"</option>";
+        ls += "<li><b><u>"+tags[tag]["val"]+"</b></u>: "+tags[tag]["desc"]+"</li>";
+    }
+    $("#list-tags").html(ls);
     $(":input[type='text']").keyboard({
         language: ['hi'],
         rtl: false,
@@ -12,8 +24,8 @@ $(document).ready(function() {
         stayOpen: false,
         userClosed: false,
         ignoreEsc: false,
-        lockInput: true,
         autoAccept: true,
+        preventPaste: false,
 
         position: {
             of: $("#keyboard"),
@@ -32,7 +44,7 @@ function tag_sentence(id) {
     var str = "<div class=\"col-md-12\">"
     for(i in words) {
         if(!words[i]) continue;
-        str+= "<div class=\"d1\">"+words[i]+"</div>&nbsp;<div class=\"d1\"><select id=\""+id+i+"\" class=\"form-control\" style=\"width: auto;\"><option value=\"\" selected disabled>Select Tag</option><option>1</option></select></div>&emsp;";
+        str+= "<div class=\"d1\">"+words[i]+"</div>&nbsp;<div class=\"d1\"><select id=\""+id+i+"\" class=\"form-control\" style=\"width: auto;\"><option value=\"NA\" selected disabled>Select Tag</option>"+select+"</select></div>&emsp;";
     }
     data[id] = words;
     str += "<button class=\"btn btn-primary\" onclick=\"edit('"+id+"', '"+sentence+"');\"> Edit </button></div>";
@@ -55,8 +67,8 @@ function edit(id, sentence) {
         stayOpen: false,
         userClosed: false,
         ignoreEsc: false,
-        lockInput: true,
         autoAccept: true,
+        preventPaste: false,
 
         position: {
             of: $("#keyboard"),
@@ -68,4 +80,17 @@ function edit(id, sentence) {
 
         }
     });
+}
+
+function sub() {
+    var d = {"tagged":[]};
+    for(i in data) {
+        var str = '';
+        for(j=0;j<data[i].length;++j) {
+            str += data[i][j]+'/'+$("#"+i+j).val()+' ';
+        }
+        d["tagged"].push(str);
+    }
+    $("#data").val(JSON.stringify(d));
+    $("#form").submit();
 }
