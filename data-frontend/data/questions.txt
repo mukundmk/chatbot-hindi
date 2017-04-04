@@ -1,0 +1,16 @@
+1. Write a sentence / question involving 2 or more symptoms and a related disease / diagnosis.<br/>Eg: क्या हार्ट अटैक होने से पहले बाये हाथ में दर्द और चेस्ट पेन होना सामन्य हैं?
+2. Write a sentence / question involving 3 or more symptoms.<br/>Eg: मुझे दो दिन से जुकाम, सर्दी और बुकार है।
+3. Write a sentence with symptoms and a time component.<br/>Eg: मुझे कल सुबह से पेट में दर्द है।
+4. Write a sentence / question involving a vaccine and its related disease.<br/>Eg: मैंने हेपेटाइटिस बी का टीका लिया था, लेकिन फिर भी मेरा लिवेर फेल हो गया।
+5. Write a sentence / question involving allergies and its related disease.<br/>Eg: क्या गंभीर सूजन और रैश, देर्मतितिस का प्रमाण है?
+6. Write a sentence / question about your previous diseases.<br/>Eg: मुझे चार साल पहले मलेरिया हुआ था।
+7. Write a sentence / question describing how long have you been facing the particular symptom.<br/>Eg: क्या लगतर दो महिने से खांसी होना, पसिना निकलना और थकान होना ट्यूबरकुलोसिस का निशाना हैं?
+8. Write sentence stating your blood pressure, weight and height (along with units).<br/>Eg: मेरा बी.पी 140/75  म.म है, वज़न 70 के.जी है और हैट 5.4 इंच है।
+9. Write a sentence / question involving blood pressure, weight, height and 2 or more symptoms. (along with units).<br/>Eg: मैं 2 दिन से थकान मेहसूस कर रहा हूँ, बदन में दर्द हैं और रिसेंट रेपोर्ट्स के अनुसार मेरा बी.पी 132/98  म.म है, वज़न 60 किलो है और हैट 169 सि.मी हैं।
+10. Write a sentence / question involving blood pressure, weight, height, heartbeat rate and sugar level (along with units).<br/>Eg: मेरा बी.पी 110/60  म.म है, वज़न 90 के.जी है और हैट 5.7 इंच है, हार्ट बीट रेट 90 है और शुगर लेवल 145 म.जी/दि.ल है।
+11. Write a sentence involving heartbeat rate, sugar level and symptom(s).<br/>Eg: मेरा हार्ट बीट रेट 80 हैं,शुगर लेवल 145 म.जी।दि.ल हैं, एक महिने मे 10 कि.लो वेइट लोस होने के साथ साथ चेस्ट पेन मेहसूस कर रहा हूँ।
+12. Write a sentence involving 2 or more metrics (heartbeat rate, sugar, weight, height, blood pressure) and a location.<br/>Eg: कल अस्पताल मे जाँच करने पर पता चला हैं कि मेरा बी.पी ११०।६०  म.म हैं और शुगर लेवल १४५ म.जी।दि.ल हैं।<br/>&emsp;&emsp;Or<br/>&emsp;&emsp;में वीक्ली चेकप के लिए डयागोनेस्टिक सेंटर गयी थी और पता चला की मेरी बी.पि १६०।१०२ म​.म और शुगर लेवल १४५ म.जी तक बड गया हैं।
+13. Write a sentence involving time component and a diagnosis.<br/>Eg: मुझे पिछ्ले 10 साल से डायबिटीस है।
+14. Write a sentence / question involving allergies and symptom(s).<br/>Eg: मुझे धूल एलर्जी के कारण सोने में तकलीफ होती है और नाक बंद रेहता है।
+15. Write a question / sentence involving a place (clinics / hospitals/ diagnostic center/ pharmacy).<br/>Eg: कैंसर के इलाज के लिये सबसे पास अस्पताल कौनसा है?
+16. Write a question / sentence asking for home remedy(-ies) for a diagnosis/disease.<br/>Eg: कॉमन कोल्ड के निवारण के लिये घरेलू उपचार क्या-क्या है?
