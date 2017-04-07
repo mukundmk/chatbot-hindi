@@ -8,7 +8,7 @@ Survey website for gathering data
 ## Instructions:
 - <code> pip3 install -r requirements.txt </code>
 - fill the data-frontend.ini
-- <code> uwsgi --ini data-fronend.ini </code>
+- <code> uwsgi --ini data-frontend.ini </code>
 - fill the nginx file
 - <code> sudo cp data-frontend.nginx /etc/nginx/sites-available/data-frontend </code>
 - <code> sudo ln -s /etc/nginx/sites-available/data-frontend /etc/nginx/sites-enabled/ </code>
