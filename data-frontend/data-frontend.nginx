@@ -1,0 +1,10 @@
+server {
+	listen 80;
+	server_name <IP or domain name>;
+	charset utf-8;
+
+	location / {
+		include uwsgi_params;
+		uwsgi_pass unix:<path to project>/data-frontend.sock;
+	}
+}
