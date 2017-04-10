@@ -3,7 +3,6 @@ from jinja2 import Template
 
 __author__ = 'mukundmk'
 
-templates = dict()
 with open('templates.txt') as f:
     templates = json.load(f)
 
