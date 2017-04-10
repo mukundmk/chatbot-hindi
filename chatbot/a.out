@@ -1,0 +1,27 @@
+[['मुझे', '6', 'दिन', 'सॆ', 'जुकाम', 'और', 'गले', 'में', 'दर्द', 'हैं।'], ['मुझे', 'दस्त,', 'पेट', 'दर्द', 'और', 'चेस्ट', 'पेन', 'हैं।'], ['क्या', 'हार्ट', 'अटैक', 'होने', 'से', 'पहले', 'बाये', 'हाथ', 'में', 'दर्द', 'और', 'चेस्ट', 'पेन', 'होना', 'सामन्य', 'हैं?'], ['मुझे', 'चार', 'साल', 'पहले', 'मलेरिया', 'हुआ', 'था।']] [(('*', '*', 0, 0), 'OTHERS'), (('*', 'OTHERS', 0, 1), 'NUMBER'), (('OTHERS', 'NUMBER', 0, 2), 'TIME'), (('NUMBER', 'TIME', 0, 3), 'OTHERS'), (('TIME', 'OTHERS', 0, 4), 'SYMPTOM'), (('OTHERS', 'SYMPTOM', 0, 5), 'OTHERS'), (('SYMPTOM', 'OTHERS', 0, 6), 'SYMPTOM'), (('OTHERS', 'SYMPTOM', 0, 7), 'OTHERS'), (('SYMPTOM', 'OTHERS', 0, 8), 'SYMPTOM'), (('OTHERS', 'SYMPTOM', 0, 9), 'OTHERS\n'), (('*', '*', 1, 0), 'OTHERS'), (('*', 'OTHERS', 1, 1), 'SYMPTOM'), (('OTHERS', 'SYMPTOM', 1, 2), 'SYMPTOM'), (('SYMPTOM', 'SYMPTOM', 1, 3), 'SYMPTOM'), (('SYMPTOM', 'SYMPTOM', 1, 4), 'OTHERS'), (('SYMPTOM', 'OTHERS', 1, 5), 'SYMPTOM'), (('OTHERS', 'SYMPTOM', 1, 6), 'SYMPTOM'), (('SYMPTOM', 'SYMPTOM', 1, 7), 'OTHERS\n'), (('*', '*', 2, 0), 'OTHERS'), (('*', 'OTHERS', 2, 1), 'DISEASE'), (('OTHERS', 'DISEASE', 2, 2), 'DISEASE'), (('DISEASE', 'DISEASE', 2, 3), 'OTHERS'), (('DISEASE', 'OTHERS', 2, 4), 'OTHERS'), (('OTHERS', 'OTHERS', 2, 5), 'OTHERS'), (('OTHERS', 'OTHERS', 2, 6), 'SYMPTOM'), (('OTHERS', 'SYMPTOM', 2, 7), 'SYMPTOM'), (('SYMPTOM', 'SYMPTOM', 2, 8), 'OTHERS'), (('SYMPTOM', 'OTHERS', 2, 9), 'SYMPTOM'), (('OTHERS', 'SYMPTOM', 2, 10), 'OTHERS'), (('SYMPTOM', 'OTHERS', 2, 11), 'SYMPTOM'), (('OTHERS', 'SYMPTOM', 2, 12), 'SYMPTOM'), (('SYMPTOM', 'SYMPTOM', 2, 13), 'OTHERS'), (('SYMPTOM', 'OTHERS', 2, 14), 'OTHERS'), (('OTHERS', 'OTHERS', 2, 15), 'OTHERS\n'), (('*', '*', 3, 0), 'OTHERS'), (('*', 'OTHERS', 3, 1), 'TIME'), (('OTHERS', 'TIME', 3, 2), 'TIME'), (('TIME', 'TIME', 3, 3), 'OTHERS'), (('TIME', 'OTHERS', 3, 4), 'DISEASE'), (('OTHERS', 'DISEASE', 3, 5), 'OTHERS'), (('DISEASE', 'OTHERS', 3, 6), 'OTHERS')] [10, 18, 34, 41]
+After build_history
+{'DISEASE': [<function feature_functions.fDISEASE_1 at 0x10218d488>, <function feature_functions.fDISEASE_2 at 0x10218d510>, <function feature_functions.fDISEASE_3 at 0x10218d598>, <function feature_functions.fDISEASE_4 at 0x10218d620>, <function feature_functions.fDISEASE_5 at 0x10218d6a8>, <function feature_functions.fDISEASE_6 at 0x10218d730>], 'SYMPTOM': [<function feature_functions.fSYMPTOM_1 at 0x10218d7b8>, <function feature_functions.fSYMPTOM_2 at 0x10218d840>, <function feature_functions.fSYMPTOM_3 at 0x10218d8c8>, <function feature_functions.fSYMPTOM_4 at 0x10218d950>, <function feature_functions.fSYMPTOM_5 at 0x10218d9d8>, <function feature_functions.fSYMPTOM_6 at 0x10218da60>], 'TIME': [<function feature_functions.fTIME_1 at 0x10218dae8>, <function feature_functions.fTIME_2 at 0x10218db70>], 'VACCINE': [<function feature_functions.fVACCINE_1 at 0x10218dbf8>, <function feature_functions.fVACCINE_2 at 0x10218dc80>, <function feature_functions.fVACCINE_3 at 0x10218dd08>, <function feature_functions.fVACCINE_4 at 0x10218dd90>], 'NUMBER': [<function feature_functions.fNUMBER_1 at 0x10218de18>, <function feature_functions.fNUMBER_2 at 0x10218dea0>], 'ALLERGY': [<function feature_functions.fALLERGY_1 at 0x10218df28>, <function feature_functions.fALLERGY_2 at 0x102175048>, <function feature_functions.fALLERGY_3 at 0x1021750d0>], 'PLACE': [<function feature_functions.fPLACE_1 at 0x102175158>], 'UNIT': [<function feature_functions.fUNIT_1 at 0x1021751e0>, <function feature_functions.fUNIT_2 at 0x102175268>, <function feature_functions.fUNIT_3 at 0x1021752f0>], 'METRIC': [<function feature_functions.fMETRIC_1 at 0x102175378>]}
+['ट्यूबरकुलोसिस', 'हार्ट अटैक', 'एच. आई. वी.  एड्स', 'डायबिटीस']
+hello
+('ALLERGY', 'DISEASE', 'METRIC', 'NAME', 'NUMBER', 'OTHERS', 'PLACE', 'SYMPTOM', 'TIME', 'UNIT', 'VACCINE')
+41
+hai
+[[0 0 0 ..., 0 0 0]
+ [0 0 0 ..., 0 0 0]
+ [0 0 0 ..., 0 0 0]
+ ..., 
+ [1 0 0 ..., 0 0 0]
+ [0 0 0 ..., 0 0 0]
+ [0 0 0 ..., 0 0 0]]
+28
+38
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+before training:  2017-04-10 11:28:51.815261
+after training:  2017-04-10 11:28:52.590784   total time =  0.775523
+[  9.99979401e+02   7.22470667e+00   7.22476710e+00   0.00000000e+00
+   0.00000000e+00   0.00000000e+00   7.97220172e+00   8.20116963e+00
+   7.83940699e+00   1.44464121e+00   1.12463048e+00   7.41267636e+00
+   7.83003785e+00   0.00000000e+00   0.00000000e+00   0.00000000e+00
+   0.00000000e+00   0.00000000e+00  -3.38486607e+00   7.22378069e+00
+   0.00000000e+00   0.00000000e+00   0.00000000e+00   0.00000000e+00
+   0.00000000e+00  -2.90106525e-01   0.00000000e+00   0.00000000e+00]

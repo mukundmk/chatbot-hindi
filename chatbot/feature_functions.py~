@@ -1,0 +1,16 @@
+import json
+
+class feature_functions:
+    def __init__(self):
+        self.diseases = []
+        self.symptoms = []
+        self.time = []
+
+    def read_word_list(self):
+        fo = open('word_list.json', 'r')
+        with fo as f:
+            root = json.load(f)
+
+        self.diseases = root["diseases"]
+        self.symptoms = root["symptoms"]
+        self.time = root["time"]
