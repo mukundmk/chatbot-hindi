@@ -1,2 +1,2 @@
 # chatbot-hindi
-Medical Chatbot for Hindi
+Dialog System for Medical Domain in Hindi
